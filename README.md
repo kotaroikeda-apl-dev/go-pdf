@@ -3,7 +3,7 @@
 ## **実行方法**
 
 ```sh
-go run cmd/basic/main.go # データベースからExcelを出力
+go run cmd/basic/main.go # データベースからPDFを出力
 ```
 
 ## **学習ポイント**
