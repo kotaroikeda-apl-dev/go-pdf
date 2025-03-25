@@ -4,6 +4,7 @@
 
 ```sh
 go run cmd/basic/main.go # データベースからPDFを出力
+go run cmd/layout/main.go # テーブル形式のデータを出力
 ```
 
 ## **学習ポイント**
@@ -11,6 +12,8 @@ go run cmd/basic/main.go # データベースからPDFを出力
 1. **`gofpdf.New()`** で PDF の用紙サイズ・単位・フォントフォルダを設定できる。
 2. **`Cell()`** で列幅・高さを指定しながらテーブル形式のデータを出力できる。
 3. 日本語対応フォントは **`AddUTF8Font()`** で登録し、**`SetFont()`** で使用する。
+4. ページ番号は **`SetFooterFunc()`** で設定する。
+5. テーブルのヘッダーは **`SetFillColor()`** で背景色を設定し、**`CellFormat()`** でテーブル形式のデータを出力する。
 
 ## 作成者
 
