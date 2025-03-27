@@ -5,6 +5,7 @@
 ```sh
 go run cmd/basic/main.go # データベースからPDFを出力
 go run cmd/layout/main.go # テーブル形式のデータを出力
+go run cmd/parallel/main.go # 並列処理でPDFを出力
 ```
 
 ## **学習ポイント**
@@ -14,6 +15,7 @@ go run cmd/layout/main.go # テーブル形式のデータを出力
 3. 日本語対応フォントは **`AddUTF8Font()`** で登録し、**`SetFont()`** で使用する。
 4. ページ番号は **`SetFooterFunc()`** で設定する。
 5. テーブルのヘッダーは **`SetFillColor()`** で背景色を設定し、**`CellFormat()`** でテーブル形式のデータを出力する。
+6. 並列処理は **`sync.WaitGroup`** で待ち合わせを行う。
 
 ## 作成者
 
